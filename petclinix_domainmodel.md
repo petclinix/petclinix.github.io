@@ -1,53 +1,4 @@
-# Petclinix - Domain and Features
-
-## 🖥️ Functionality from End-User Perspective
-
-### 🧍‍♂️ Pet Owner Features
-
-- Register/Login (simple, no mail challenges or OAuth needed)
-- Add Pet (name, type, breed, picture upload)
-- View Pet Profile (with diagnosis & vaccination history)
-- Book Appointment (select vet, time slot)
-
-
-### 🩺 Vet Features
-
-- Register/Login (simple, no mail challenges or OAuth needed)
-- Set Availability (weekly schedule, bookable slots)
-- View Appointments
-- Record Visit (diagnosis, vaccination, notes), Pet Owner can view the visits
-
-
-### 🛠️ Admin Features
-
-- User Management (list, deactivate users)
-- Basic Activity Logs (last login, actions)
-- Simple Stats Dashboard (e.g., # of pets, appointments per vet)
-
-
----
-
-## 👥 Roles
-
-### Pet Owner
-- View and manage pets
-- Book appointments
-- View visit history
-
-### Veterinarian
-- Define availability and time slots
-- View and manage appointments
-- Document visits
-
-### Admin / Clinic Staff
-- Manage owners, pets, vets, and appointments
-- Monitor booking activity
-
-
----
-
-## 🧩 Domain Model
-
+# 🧩 Domain Model - Recommendation
 
 ```mermaid
 erDiagram
@@ -121,7 +72,7 @@ erDiagram
     
 ```
 
-### Main Entities
+## Main Entities
 | Entity       | Description |
 |--------------|-------------|
 | `User`       | User with name, role and credentials |
@@ -133,7 +84,7 @@ erDiagram
 | `Visit`      | A entry created by vet with notes and diagnosis |
 | `ActivityLog`| Simple Audit |
 
-### Relationships
+## Relationships
 
 - A `Owner` can own multiple `Pets` (1:N)
 - A `Pet` can have multiple `Appointments` (1:N)
@@ -143,5 +94,3 @@ erDiagram
 - A `User` can have multiple `ActivityLogs` (1:N)
 
 ---
-
-
