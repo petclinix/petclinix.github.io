@@ -1,14 +1,24 @@
 # 🐾 Petclinix – Proof your paradigm
 
-Welcome to **Petclinix**, a technology showcase inspired by the classic Petclinic domain. This project is designed to demonstrate a wide range of software paradigms, architectural styles, and design principles using a familiar and extensible veterinary clinic model.
+Welcome to **Petclinix**, your launchpad for architectural creativity and technical excellence. Inspired by the legendary Petclinic domain, this project invites developers to build, break, and boldly explore software paradigms in a familiar yet flexible environment.
+Whether you're into building the next ⭐ framework, crafting microservices, designing event-driven systems, applying clean architecture, exploring bleeding-edge tech stacks — or proving that plain C is still king — Petclinix is your canvas.
+
 
 ---
 
 ## 🚀 What is Petclinix?
 
-**Petclinix** is a domain-driven playground inspired by the Spring Petclinic project. It provides a realistic yet flexible model for experimenting with software architecture, design paradigms, and technology stacks.
+**Petclinix** is more than a demo — it's a developer-driven showcase. Based on the Spring Petclinic idea, it offers a realistic domain to:
 
-Implement your favorite technology and design paradigm, and validate your ideas in a runnable environment.
+* Prototype your favorite architecture or design pattern
+* Validate ideas in a runnable, extensible environment
+* Share your best practices with the community
+* Inspire others with your technical craftsmanship
+
+Create your own Petclinix flavor. Show us how you think software should be built.
+
+**Proof your paradigm.**
+
 
 ---
 
@@ -18,17 +28,95 @@ Implement your favorite technology and design paradigm, and validate your ideas 
 - ✅ Encourage experimentation and learning
 - ✅ Serve as a reference for best practices
 
+
 ---
 
-## 🚀 Domainmodel / Features Overview
+## 🚀 Rules for a Showcase
 
-[Overview](petclinix_overview.md)
+To keep Petclinix showcases consistent, accessible, and inspiring, please follow these guidelines when creating your own flavor:
+
+
+1. **Functionality**:
+Implement the application so that all features listed under 'Functionality Requirements' are fulfilled.
+
+2. **Repository Naming**:
+The repository name should include the main framework or programming language used, along with a short descriptor (e.g., nestjs-cleanarch, go-ddd, rust-actor-model).
+
+3. **README Requirements**:
+Your README.md must:
+    * Clearly explain the idea or paradigm being showcased.
+    * Include instructions on how to run the project locally or in a containerized environment.
+
+4. **Executable Setup**:
+The repository must contain either:
+    * A docker-compose.yml file, or
+    * A k8s/ folder with Kubernetes manifests
+
+    to ensure all required components can be launched easily.
+
+
+---
+
+## 🖥️ Functionality Requirements from End-User Perspective
+
+The application can handle three different roles.
+
+### 👥 Roles
+
+#### Pet Owner
+- View and manage pets
+- Book appointments
+- View visit history
+
+#### Veterinarian
+- Define availability and time slots
+- View and manage appointments
+- Document visits
+
+#### Admin / Clinic Staff
+- Manage owners, pets, vets, and appointments
+- Monitor booking activity
+
+### 🖥️ Features
+
+#### 🧍‍♂️ Pet Owner Features
+
+- Register/Login (simple, no mail challenges or OAuth needed)
+- Add Pet (name, type, breed, picture upload)
+- View Pet Profile (with diagnosis & vaccination history)
+- Book Appointment (select vet, time slot)
+
+
+#### 🩺 Vet Features
+
+- Register/Login (simple, no mail challenges or OAuth needed)
+- Set Availability (weekly schedule, bookable slots)
+- View Appointments
+- Record Visit (diagnosis, vaccination, notes), Pet Owner can view the visits
+
+
+#### 🛠️ Admin Features
+
+- User Management (list, deactivate users)
+- Basic Activity Logs (last login, actions)
+- Simple Stats Dashboard (e.g., # of pets, appointments per vet)
+
+
+---
 
 ## 🌐 Get Started
+Ready to showcase your paradigm? Here's how to join the Petclinix movement:
 
-Visit the GitHub repository to explore the code, contribute, or start your own repo.
-The repo name must contain the main framework or programming language and some additional information.
-The README should explain the used idea. The README must contain some information on how to run the project.
-The repo must contian a docker-compose.yml or a k8s folder to execute all needed componentens.
+1. Fork or create your own repository based on existing Petclinix GitHub Repositories or start from scratch with Petclinix GitHub template.
+2. Name your repo to reflect the main framework or programming language you're using—plus any extra context you'd like to share.
+3. Include a clear and concise README that:
+
+    1. Explains your chosen architecture or design idea
+    2. Provides setup instructions so others can run your project easily
+
+
+4. Add either a docker-compose.yml or a k8s/ folder to orchestrate all required components.
+
+You can use the recommended [Domain Model](petclinix_domainmodel.md) as a starting point—or define your own if your paradigm calls for it.
 
 ---
