@@ -6,7 +6,7 @@ Welcome to **Petclinix**, a technology showcase inspired by the classic Petclini
 
 ## 🚀 What is Petclinix?
 
-*Petclinix** is a domain-driven playground inspired by the Spring Petclinic project. It provides a realistic yet flexible model for experimenting with software architecture, design paradigms, and technology stacks.
+**Petclinix** is a domain-driven playground inspired by the Spring Petclinic project. It provides a realistic yet flexible model for experimenting with software architecture, design paradigms, and technology stacks.
 
 Implement your favorite technology and design paradigm, and validate your ideas in a runnable environment.
 
@@ -19,6 +19,10 @@ Implement your favorite technology and design paradigm, and validate your ideas 
 - ✅ Serve as a reference for best practices
 
 ---
+
+## 🚀 Domainmodel / Features Overview
+
+[Overview](petclinix_overview.md)
 
 ## 🌐 Get Started
 
