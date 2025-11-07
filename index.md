@@ -22,7 +22,7 @@ architecture, exploring bleeding-edge tech stacks — or proving that plain C is
 
 Create your own **PetcliniX** flavor. Show us how you think software should be built.
 
-
+Read more about the [goals](about.md) of the project.
 
 ---
 
