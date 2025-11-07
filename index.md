@@ -44,7 +44,7 @@ To keep **PetcliniX** showcases consistent, accessible, and inspiring, please fo
 Implement the application so that all features listed under 'Functionality Requirements' are fulfilled.
 
 2. **Repository Naming**:
-The repository name should include the main framework or programming language used, along with a short descriptor (e.g., nestjs-cleanarch, go-ddd, rust-actor-model).
+The repository name must include the main  programming language, the backend framework and optional the frontend framework and a short descriptor (e.g., java-spring-react-mtier).
 
 3. **README Requirements**:
 Your README.md must:
@@ -117,7 +117,6 @@ Ready to showcase your paradigm? Here's how to join the **PetcliniX** movement:
 
     1. Explains your chosen architecture or design idea
     2. Provides setup instructions so others can run your project easily
-
 
 4. Add either a docker-compose.yml or a k8s/ folder to orchestrate all required components.
 
