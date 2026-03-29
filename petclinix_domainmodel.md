@@ -73,6 +73,7 @@ erDiagram
 ```
 
 ## Main Entities
+
 | Entity       | Description |
 |--------------|-------------|
 | `User`       | User with name, role and credentials |
