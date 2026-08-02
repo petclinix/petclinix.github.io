@@ -9,6 +9,13 @@ Whether you're into building the next ⭐ framework, crafting microservices, des
 
 ---
 
+## 🏗️ See PetcliniX in Action
+
+Don't just read about it — explore a real, running implementation.
+👉 **[Browse the available implementations](implementations.md)** to see how different teams tackled the same domain with different paradigms and tech stacks.
+
+---
+
 ## 🚀 What is **PetcliniX**?
 
 **PetcliniX** is more than a demo — it's a developer-driven showcase.
@@ -32,13 +39,6 @@ Read more about the [goals](about.md) of the project.
 - ✅ Encourage experimentation and learning
 - ✅ Serve as a reference for best practices
 
-
----
-
-## 🏗️ Implementations
-
-See **PetcliniX** in action.
-Browse the [available implementations](implementations.md) to explore how different teams tackled the same domain with different paradigms and tech stacks.
 
 ---
 

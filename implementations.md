@@ -11,6 +11,14 @@ Explore the repositories to compare trade-offs directly.
 
 ---
 
+## At a Glance
+
+| Implementation | Paradigm | Stack | Summary |
+|---|---|---|---|
+| [java-springboot-react-mtier](https://github.com/petclinix/java-springboot-react-mtier) | Classic layered monolith | Java 21 · Spring Boot 3.5 · React 19 · MariaDB | Spring Boot REST backend + React SPA frontend behind Nginx, with JWT auth and a Docker Compose setup. |
+
+---
+
 ## [java-springboot-react-mtier](https://github.com/petclinix/java-springboot-react-mtier)
 
 *A veterinary clinic management system implemented as a classic layered monolith: Spring Boot REST backend and React SPA frontend.*
