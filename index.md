@@ -35,6 +35,13 @@ Read more about the [goals](about.md) of the project.
 
 ---
 
+## 🏗️ Implementations
+
+See **PetcliniX** in action. Browse the [available implementations](implementations.md) to explore how different
+teams tackled the same domain with different paradigms and tech stacks.
+
+---
+
 ## 🚀 Rules for a Showcase
 
 To keep **PetcliniX** showcases consistent, accessible, and inspiring, please follow these guidelines when creating your own flavor:
