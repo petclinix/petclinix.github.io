@@ -1,0 +1,18 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown: one sentence per line (semantic linefeeds).
+# This is a convention, not something EditorConfig can enforce automatically -
+# it keeps diffs readable, since changing one sentence only touches one line.
+# Markdown hard line breaks (two trailing spaces) are still allowed, so don't
+# trim trailing whitespace here.
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
