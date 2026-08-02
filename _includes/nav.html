@@ -1,0 +1,29 @@
+<nav class="site-nav">
+  <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+  <a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a>
+  <a href="/implementations/" {% if page.url == "/implementations/" %}aria-current="page"{% endif %}>Implementations</a>
+  <a href="/petclinix_domainmodel/" {% if page.url == "/petclinix_domainmodel/" %}aria-current="page"{% endif %}>Domain Model</a>
+</nav>
+<style>
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .site-nav a {
+    text-decoration: none;
+    color: #0366d6;
+  }
+  .site-nav a:hover {
+    text-decoration: underline;
+  }
+  .site-nav a[aria-current="page"] {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
