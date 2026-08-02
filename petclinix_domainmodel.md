@@ -1,3 +1,8 @@
+---
+title: Domain Model - PetcliniX
+permalink: /petclinix_domainmodel/
+---
+
 # 🧩 Domain Model - Recommendation
 
 ```mermaid
