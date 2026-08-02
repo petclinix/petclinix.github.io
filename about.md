@@ -58,7 +58,7 @@ This creates enough complexity to demonstrate design patterns like domain-driven
 
 ## Showcases and Analyses
 
-The different implementations can be discovered and explored in the repository. Each implementation is executable and so
+The different implementations can be discovered and explored on the [implementations](/implementations/) page. Each implementation is executable and so
 many different apsects can be compared directly.
 The showcases show footprints of the system and the trade-offs made. There are several different cateogorties. 
 - Footpring of the componentes (HD, Memory, CPU)
