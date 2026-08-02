@@ -1,10 +1,8 @@
 # 🐾 **PetcliniX** – Proof your paradigm
 
-Welcome to **PetcliniX**, your launchpad for architectural creativity and technical excellence. Inspired by the legendary 
-Spring Petclinic, this project invites developers to build, break, and boldly explore software paradigms in a familiar yet 
-flexible environment.
-Whether you're into building the next ⭐ framework, crafting microservices, designing event-driven systems, applying clean 
-architecture, exploring bleeding-edge tech stacks — or proving that plain C is still king — **PetcliniX** is your canvas.
+Welcome to **PetcliniX**, your launchpad for architectural creativity and technical excellence.
+Inspired by the legendary Spring Petclinic, this project invites developers to build, break, and boldly explore software paradigms in a familiar yet flexible environment.
+Whether you're into building the next ⭐ framework, crafting microservices, designing event-driven systems, applying clean architecture, exploring bleeding-edge tech stacks — or proving that plain C is still king — **PetcliniX** is your canvas.
 
 **Proof your paradigm.**
 
@@ -13,14 +11,16 @@ architecture, exploring bleeding-edge tech stacks — or proving that plain C is
 
 ## 🚀 What is **PetcliniX**?
 
-**PetcliniX** is more than a demo — it's a developer-driven showcase. It offers a realistic domain to:
+**PetcliniX** is more than a demo — it's a developer-driven showcase.
+It offers a realistic domain to:
 
 * Prototype your favorite architecture or design pattern
 * Validate ideas in a runnable, extensible environment
 * Share your best practices with the community
 * Inspire others with your technical craftsmanship
 
-Create your own **PetcliniX** flavor. Show us how you think software should be built.
+Create your own **PetcliniX** flavor.
+Show us how you think software should be built.
 
 Read more about the [goals](about.md) of the project.
 
@@ -37,8 +37,8 @@ Read more about the [goals](about.md) of the project.
 
 ## 🏗️ Implementations
 
-See **PetcliniX** in action. Browse the [available implementations](implementations.md) to explore how different
-teams tackled the same domain with different paradigms and tech stacks.
+See **PetcliniX** in action.
+Browse the [available implementations](implementations.md) to explore how different teams tackled the same domain with different paradigms and tech stacks.
 
 ---
 
@@ -116,7 +116,8 @@ The application can handle three different roles.
 ---
 
 ## 🌐 Get Started
-Ready to showcase your paradigm? Here's how to join the **PetcliniX** movement:
+Ready to showcase your paradigm?
+Here's how to join the **PetcliniX** movement:
 
 1. Fork or create your own repository based on existing **PetcliniX** GitHub Repositories or start from scratch with **PetcliniX** GitHub template.
 2. Name your repo to reflect the main framework or programming language you're using—plus any extra context you'd like to share.

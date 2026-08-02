@@ -5,9 +5,9 @@ permalink: /implementations/
 
 # 🏗️ Implementations
 
-This page lists the available **PetcliniX** showcases as they're built. Each one implements the same
-[domain model](petclinix_domainmodel.md) and functionality requirements, but with a different paradigm, language, or
-architecture. Explore the repositories to compare trade-offs directly.
+This page lists the available **PetcliniX** showcases as they're built.
+Each one implements the same [domain model](petclinix_domainmodel.md) and functionality requirements, but with a different paradigm, language, or architecture.
+Explore the repositories to compare trade-offs directly.
 
 ---
 
@@ -25,4 +25,5 @@ architecture. Explore the repositories to compare trade-offs directly.
 
 ---
 
-Want to add your own paradigm to this list? See the [rules for a showcase](index.md) and the [project goals](about.md).
+Want to add your own paradigm to this list?
+See the [rules for a showcase](index.md) and the [project goals](about.md).
