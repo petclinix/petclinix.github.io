@@ -81,6 +81,12 @@ The application can handle three different roles.
 
 ### 👥 Roles
 
+- **Pet Owner** — a clinic customer who owns one or more pets.
+- **Veterinarian** — the vet and any clinic staff working the front line: booking, appointments, treatment.
+- **Admin** — a technical/system administrator, not clinic staff. Operates the platform itself
+  (e.g. deactivating a banned owner or vet account, monitoring system activity) rather than
+  treating pets or managing appointments.
+
 #### Pet Owner
 - View and manage pets
 - Book appointments
@@ -91,9 +97,9 @@ The application can handle three different roles.
 - View and manage appointments
 - Document visits
 
-#### Admin / Clinic Staff
-- Manage owners, pets, vets, and appointments
-- Monitor booking activity
+#### Admin
+- Manage user accounts (list, deactivate)
+- Monitor booking activity and view stats
 
 ### 🖥️ Features
 
