@@ -72,6 +72,13 @@ The repository must contain either:
 
 The application can handle three different roles.
 
+> **Design note — depth over breadth.** PetcliniX is meant to be understood and reviewed in one sitting.
+> Most features below are intentionally plain CRUD — that part of the domain is well covered by tutorials.
+> **Appointment scheduling is the deliberate exception.** It's where the real business logic lives, and it's
+> the feature every implementation is expected to handle properly (see the [Domain Model](petclinix_domainmodel.md)
+> for the lifecycle and rules). Don't try to compensate for its simplicity elsewhere by adding more domains
+> (billing, inventory, etc.) — that dilutes the "grok it in one session" goal without adding architectural insight.
+
 ### 👥 Roles
 
 #### Pet Owner
@@ -93,16 +100,20 @@ The application can handle three different roles.
 #### 🧍‍♂️ Pet Owner Features
 
 - Register/Login (simple, no mail challenges or OAuth needed)
-- Add Pet (name, type, breed, picture upload)
+- Add Pet (name, type, breed, picture upload — *storage location is an implementation detail: keep the
+  image out of the primary database (filesystem or object storage, referenced by URL); this is not a
+  paradigm-differentiating concern and doesn't need review-session attention*)
 - View Pet Profile (with diagnosis & vaccination history)
-- Book Appointment (select vet, time slot)
+- Book Appointment (select vet, time slot — only truly open slots may be offered/accepted, see
+  [Appointment Business Rules](#appointment-business-rules))
+- Cancel or Reschedule Appointment (subject to the cancellation cutoff rule)
 
 
 #### 🩺 Vet Features
 
 - Register/Login (simple, no mail challenges or OAuth needed)
-- Set Availability (weekly schedule, bookable slots)
-- View Appointments
+- Set Availability (recurring weekly schedule, plus one-off exceptions such as vacation or sick leave)
+- View and Manage Appointments (confirm, mark completed, mark no-show)
 - Record Visit (diagnosis, vaccination, notes), Pet Owner can view the visits
 
 
@@ -111,6 +122,26 @@ The application can handle three different roles.
 - User Management (list, deactivate users)
 - Basic Activity Logs (last login, actions)
 - Simple Stats Dashboard (e.g., # of pets, appointments per vet)
+
+
+### Appointment Business Rules
+
+This is the feature every implementation must handle correctly — plain CRUD or a single DB
+uniqueness constraint is not sufficient. It's meant to expose how differently each paradigm
+handles derived state, concurrency, and lifecycle logic.
+
+1. **Availability is derived, not stored.** A bookable slot = the vet's recurring weekly
+   availability, minus already-booked appointments, minus one-off exceptions (vacation/sick leave).
+   Nothing about "free slots" is persisted directly.
+2. **Variable duration.** Appointments have a duration (depending on visit type), so conflict
+   checking is a time-range overlap, not an equality check on a single timestamp.
+3. **No double-booking under concurrency.** Two owners attempting to book the same (or an
+   overlapping) slot at the same time must not both succeed. This must hold under real concurrent
+   requests, not just sequential testing.
+4. **Lifecycle / state machine.** `booked → confirmed → completed / cancelled / no-show`. Invalid
+   transitions (e.g. completing a cancelled appointment) must be rejected.
+5. **Cancellation cutoff.** Cancelling or rescheduling is only allowed until a defined cutoff before
+   the slot (e.g. 2 hours). A reschedule is a cancel+rebook that is still subject to rule 3.
 
 
 ---
