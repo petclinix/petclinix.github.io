@@ -16,6 +16,7 @@ Explore the repositories to compare trade-offs directly.
 | Implementation | Paradigm | Stack | Summary |
 |---|---|---|---|
 | [java-springboot-react-mtier](https://github.com/petclinix/java-springboot-react-mtier) | Classic layered monolith | Java 21 · Spring Boot 3.5 · React 19 · MariaDB | Spring Boot REST backend + React SPA frontend behind Nginx, with JWT auth and a Docker Compose setup. |
+| [php-twig-mtier](https://github.com/petclinix/php-twig-mtier) | Server-rendered MVC | PHP · Twig · MariaDB (PDO) | Classic server-rendered PHP MVC with hand-rolled PDO instead of an ORM, in a thin Controller → Service → Repository → Domain architecture. |
 
 ---
 
@@ -30,6 +31,20 @@ Explore the repositories to compare trade-offs directly.
 - **Auth:** JWT (HS256, 1-hour expiry)
 - **Infra:** Docker Compose with Nginx ingress
 - **Run it:** `docker compose up --build` → [http://localhost:8080](http://localhost:8080)
+
+---
+
+## [php-twig-mtier](https://github.com/petclinix/php-twig-mtier)
+
+*A veterinary clinic management system implemented as classic server-rendered PHP MVC, with hand-rolled PDO instead of an ORM.*
+
+- **Paradigm:** Server-rendered MVC, layered architecture (Controller → Service → Repository → Domain)
+- **Backend:** PHP, Twig templating, direct SQL via PDO (no ORM)
+- **Database:** MariaDB
+- **Testing:** PHPUnit (unit), Playwright (E2E)
+- **Code quality:** php-cs-fixer, PHPStan (level 8), Deptrac
+- **Infra:** Docker Compose
+- **Run it:** `docker compose up --build` → [http://localhost:8080](http://localhost:8080) (self-register or use seeded `admin@petclinix.local` / `admin12345`)
 
 ---
 
