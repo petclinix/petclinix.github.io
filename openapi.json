@@ -1,0 +1,1457 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://petclinix-openapi-backend:8080/api",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/vet/visits/{appointmentId}": {
+      "get": {
+        "tags": [
+          "vet-visits-controller"
+        ],
+        "operationId": "get",
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VetVisit"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "vet-visits-controller"
+        ],
+        "operationId": "put",
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VetVisitRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VetVisit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vet/appointments/{id}/no-show": {
+      "put": {
+        "tags": [
+          "vet-appointments-controller"
+        ],
+        "operationId": "markNoShow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/vet/appointments/{id}/confirm": {
+      "put": {
+        "tags": [
+          "vet-appointments-controller"
+        ],
+        "operationId": "confirm",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pets/{id}": {
+      "put": {
+        "tags": [
+          "pets-controller"
+        ],
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PetRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "pets-controller"
+        ],
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/owner/appointments/{id}/reschedule": {
+      "put": {
+        "tags": [
+          "owner-appointments-controller"
+        ],
+        "operationId": "reschedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RescheduleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Appointment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/locations/{id}": {
+      "get": {
+        "tags": [
+          "locations-controller"
+        ],
+        "operationId": "retrieve",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "locations-controller"
+        ],
+        "operationId": "update_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Location"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "locations-controller"
+        ],
+        "operationId": "delete_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/admin/users/{id}/deactivate": {
+      "put": {
+        "tags": [
+          "admin-users-controller"
+        ],
+        "operationId": "deactivate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/users/{id}/activate": {
+      "put": {
+        "tags": [
+          "admin-users-controller"
+        ],
+        "operationId": "activate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "tags": [
+          "users-controller"
+        ],
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pets": {
+      "get": {
+        "tags": [
+          "pets-controller"
+        ],
+        "operationId": "retrieveAll",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "pets-controller"
+        ],
+        "operationId": "create",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PetRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owner/appointments": {
+      "get": {
+        "tags": [
+          "owner-appointments-controller"
+        ],
+        "operationId": "list",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Appointment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "owner-appointments-controller"
+        ],
+        "operationId": "create_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Appointment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/locations": {
+      "get": {
+        "tags": [
+          "locations-controller"
+        ],
+        "operationId": "retrieveAll_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Location"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "locations-controller"
+        ],
+        "operationId": "create_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Location"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "auth-controller"
+        ],
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vets": {
+      "get": {
+        "tags": [
+          "vets-controller"
+        ],
+        "operationId": "retrieveAll_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vet/appointments": {
+      "get": {
+        "tags": [
+          "vet-appointments-controller"
+        ],
+        "operationId": "list_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VetAppointment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/aboutme": {
+      "get": {
+        "tags": [
+          "users-controller"
+        ],
+        "operationId": "aboutme",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owner/pets/{petId}/visits": {
+      "get": {
+        "tags": [
+          "owner-pet-visits-controller"
+        ],
+        "operationId": "list_2",
+        "parameters": [
+          {
+            "name": "petId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OwnerVisit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owner/locations": {
+      "get": {
+        "tags": [
+          "owner-locations-controller"
+        ],
+        "operationId": "retrieveAll_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookableLocation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owner/locations/{id}/available-slots": {
+      "get": {
+        "tags": [
+          "owner-locations-controller"
+        ],
+        "operationId": "retrieveAvailableSlots",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "appointmentType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "VACCINATION",
+                "FOLLOW_UP",
+                "CHECKUP",
+                "EMERGENCY",
+                "SURGERY"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvailableSlot"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/users": {
+      "get": {
+        "tags": [
+          "admin-users-controller"
+        ],
+        "operationId": "getAll",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AdminUserResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/stats": {
+      "get": {
+        "tags": [
+          "admin-stats-controller"
+        ],
+        "operationId": "get_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatsData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/activity-logs": {
+      "get": {
+        "tags": [
+          "admin-activity-log-controller"
+        ],
+        "operationId": "get_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ActivityLogEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vet/appointments/{id}": {
+      "delete": {
+        "tags": [
+          "vet-appointments-controller"
+        ],
+        "operationId": "cancel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/owner/appointments/{id}": {
+      "delete": {
+        "tags": [
+          "owner-appointments-controller"
+        ],
+        "operationId": "cancel_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VetVisitRequest": {
+        "type": "object",
+        "properties": {
+          "vetSummary": {
+            "type": "string"
+          },
+          "ownerSummary": {
+            "type": "string"
+          },
+          "vaccination": {
+            "type": "string"
+          }
+        }
+      },
+      "VetVisit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "vetSummary": {
+            "type": "string"
+          },
+          "ownerSummary": {
+            "type": "string"
+          },
+          "vaccination": {
+            "type": "string"
+          }
+        }
+      },
+      "PetRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "species": {
+            "type": "string",
+            "enum": [
+              "DOG",
+              "CAT",
+              "BIRD",
+              "RABBIT",
+              "REPTILE",
+              "OTHER"
+            ]
+          },
+          "breed": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "MALE",
+              "FEMALE",
+              "UNKNOWN"
+            ]
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "picture": {
+            "type": "string",
+            "format": "byte"
+          },
+          "pictureContentType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "Pet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "species": {
+            "type": "string"
+          },
+          "breed": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "picture": {
+            "type": "string",
+            "format": "byte"
+          },
+          "pictureContentType": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RescheduleRequest": {
+        "type": "object",
+        "properties": {
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "startsAt"
+        ]
+      },
+      "Appointment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "vetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "petId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "BOOKED",
+              "CONFIRMED",
+              "CANCELLED",
+              "COMPLETED",
+              "NO_SHOW"
+            ]
+          },
+          "appointmentType": {
+            "type": "string",
+            "enum": [
+              "VACCINATION",
+              "FOLLOW_UP",
+              "CHECKUP",
+              "EMERGENCY",
+              "SURGERY"
+            ]
+          }
+        }
+      },
+      "Location": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "zoneId": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "weeklyPeriods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OpeningPeriodResponse"
+            }
+          },
+          "overrides": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OpeningOverrideResponse"
+            }
+          }
+        }
+      },
+      "OpeningOverrideResponse": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "openTime": {
+            "type": "string"
+          },
+          "closeTime": {
+            "type": "string"
+          },
+          "closed": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
+      "OpeningPeriodResponse": {
+        "type": "object",
+        "properties": {
+          "dayOfWeek": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string"
+          },
+          "endTime": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AdminUserResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "lastLogin": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "ADMIN",
+              "VET",
+              "OWNER"
+            ]
+          }
+        },
+        "required": [
+          "password",
+          "type",
+          "username"
+        ]
+      },
+      "UserResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        }
+      },
+      "AppointmentRequest": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "petId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "appointmentType": {
+            "type": "string",
+            "enum": [
+              "VACCINATION",
+              "FOLLOW_UP",
+              "CHECKUP",
+              "EMERGENCY",
+              "SURGERY"
+            ]
+          }
+        },
+        "required": [
+          "appointmentType",
+          "locationId",
+          "petId",
+          "startsAt"
+        ]
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "password",
+          "username"
+        ]
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "Vet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "VetAppointment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "petId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "petName": {
+            "type": "string"
+          },
+          "ownerUsername": {
+            "type": "string"
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "BOOKED",
+              "CONFIRMED",
+              "CANCELLED",
+              "COMPLETED",
+              "NO_SHOW"
+            ]
+          },
+          "appointmentType": {
+            "type": "string",
+            "enum": [
+              "VACCINATION",
+              "FOLLOW_UP",
+              "CHECKUP",
+              "EMERGENCY",
+              "SURGERY"
+            ]
+          }
+        }
+      },
+      "OwnerVisit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ownerSummary": {
+            "type": "string"
+          },
+          "vaccination": {
+            "type": "string"
+          },
+          "vetUsername": {
+            "type": "string"
+          },
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "BookableLocation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "vetUsername": {
+            "type": "string"
+          },
+          "zoneId": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      },
+      "AvailableSlot": {
+        "type": "object",
+        "properties": {
+          "startsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endsAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "StatsData": {
+        "type": "object",
+        "properties": {
+          "totalOwners": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalVets": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPets": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalAppointments": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "appointmentsPerVet": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VetAppointmentCount"
+            }
+          }
+        }
+      },
+      "VetAppointmentCount": {
+        "type": "object",
+        "properties": {
+          "vetUsername": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ActivityLogEntry": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
