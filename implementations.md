@@ -9,6 +9,9 @@ This page lists the available **PetcliniX** showcases as they're built.
 Each one implements the same [domain model](petclinix_domainmodel.md) and functionality requirements, but with a different paradigm, language, or architecture.
 Explore the repositories to compare trade-offs directly.
 
+Building only a frontend or only a backend? You don't need to build the other half from scratch —
+see the shared **[API reference](/api/)** for the contract you can build against (or implement).
+
 ---
 
 ## At a Glance
